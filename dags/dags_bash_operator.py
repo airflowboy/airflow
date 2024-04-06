@@ -10,9 +10,6 @@ with DAG(
     schedule="0 0 * * *",
     start_date=pendulum.datetime(2023, 3, 1, tz="Asia/Seoul"),
     catchup=False,
-    #dagrun_timeout=datetime.timedelta(minutes=60),
-    #tags=["example", "example2"],
-    #params={"example_key": "example_value"},
 ) as dag:
     bash_t1 = BashOperator(
         task_id="bash_t1",
